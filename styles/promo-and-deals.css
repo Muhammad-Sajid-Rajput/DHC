@@ -1,0 +1,202 @@
+/* Section Container */
+.deals-section {
+  display: flex;
+  padding: 15px;
+  background-color: white;
+  max-width: 1100px;
+  margin: 40px auto;
+  gap: 20px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+/* Left Side (Title + Timer) */
+.deals-header {
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.deals-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.deals-subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.timer {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+}
+
+.time-box {
+  background: #333;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 6px;
+  text-align: center;
+  min-width: 20px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.time-box small {
+  font-size: 10px;
+}
+
+/* Right Side - Product Cards */
+.offers-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.offer-item {
+  background-color: #fff;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: 155px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.offer-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.offer-item h3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.offer-item .price {
+  font-size: 13px;
+  color: #323232;
+  margin: 5px 0;
+}
+
+/* Discount badge */
+.discount {
+  transform: translateX(-50%);
+  background-color: #ffe6e6;
+  color: red;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* Promos Section */
+
+.category-section {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 1100px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+  height: 300px;
+}
+
+.category-box {
+  display: flex;
+  flex-direction: row;
+  background: #f5f9fd;
+  border-radius: 12px;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.category-left.home-appliances {
+  background: url(../Images/banner/banner3.jpg) no-repeat top left;
+  background-size:cover;
+}
+
+.category-left.consumer-electronics {
+  background: url(../Images/banner/banner4.png) no-repeat center center;
+}
+
+.category-left {
+  width: 200px; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: first baseline;
+  color: #333;
+  word-break: break-word;
+}
+
+
+.category-left h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.btn-source {
+  background-color: #fff;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-grid {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: #c0c0c0;
+}
+
+.category-item {
+  background-color: white;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 149px; 
+}
+
+
+.category-item p {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #222;
+}
+
+.category-item span {
+  font-size: 12px;
+  color: #424242;
+  margin-bottom: 10px;
+}
+
+.category-item img {
+  max-width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin: 0 auto;
+}

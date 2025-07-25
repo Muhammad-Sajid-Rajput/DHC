@@ -1,0 +1,205 @@
+/* Suppliers Section */
+.suppliers-section {
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+.suppliers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 0;
+  justify-content: space-evenly;
+}
+
+.section-title {
+  font-size: 24px;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: start;
+}
+
+.suppliers-grid div {
+  width: calc(25% - 20px);   
+  font-size: 14px;
+}
+
+.suppliers-grid div .country-name {
+  display: flex;
+  align-items: center;
+  gap: 6px; 
+}
+
+.suppliers-grid span {
+  display: block;
+  color: #1c1c1c;
+  font-size: 12px;
+  margin-left: 26px;
+}
+
+.suppliers-grid img {
+  width: 20px;
+}
+
+
+
+/* ========== General Layout ========== */
+footer {
+  background-color: #fff;
+  border-top: 1px solid #dfdfdf93;
+  padding-bottom: 20px;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== Newsletter ========== */
+.newsletter-section {
+  background-color: #EFF2F4;
+  text-align: center;
+  padding: 30px 20px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.newsletter-section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  font-size: 14px;
+  color: #3f3f3f;
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  display: inline-flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.newsletter-form input {
+  border: none;
+  padding: 10px;
+  width: 250px;
+  outline: none;
+}
+
+.newsletter-form button {
+  background: #fe5300;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+/* ========== Footer Top ========== */
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+/* ========== Footer Brand ========== */
+.footer-brand {
+  flex: 1;
+}
+
+.footer-brand h2 {
+  color: #fe5300;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.footer-socials iconify-icon {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 1.5s;
+}
+
+.footer-socials iconify-icon:hover {
+  transform: scale(1.3);
+}
+
+/* ========== Footer Links ========== */
+.footer-links {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+/* ========== App Download ========== */
+.app-download {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-download h4 {
+  margin-bottom: 2px;
+}
+
+.app-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #000;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.app-icons p {
+  margin: 0;
+  font-size: 12px;
+  color: #eeeded;
+}
+
+.app-icons h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #eeeded;
+}
+
+/* ========== Footer Bottom ========== */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-bottom img {
+  width: 20px;
+  vertical-align: middle;
+}

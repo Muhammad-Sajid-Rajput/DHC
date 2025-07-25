@@ -1,0 +1,129 @@
+.trending-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1100px;
+  margin: 40px auto;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+
+}
+
+/* Left Column */
+.trending-categories {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trending-categories .category-btn {
+  padding: 7px 7px;
+  font-size: 15px;
+  color: #7c7c7c;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s, font-weight 0.2s;
+}
+
+.trending-categories .category-btn:hover,
+.trending-categories .category-btn.active {
+  background-color: #e8f0fe;
+  color: #333;
+}
+
+/* Center Column */
+.trending-banner {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: url('../Images/banner/banner1.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #000;
+  z-index: 2;
+}
+
+.banner-overlay h2 {
+  font-size: 25px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.banner-overlay button {
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Right Column */
+.trending-user {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.user-box {
+  background-color: #eef4fb;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.user-box p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.user-box .subtext {
+  font-size: 13px;
+  color: #777;
+}
+
+.btn-white {
+  background-color: white;
+  color: #1877f2;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-top: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.promo-box {
+  padding: 14px;
+  color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.promo-box.orange {
+  background-color: #fe5300;
+}
+
+.promo-box.teal {
+  background-color: #3cbac8;
+}

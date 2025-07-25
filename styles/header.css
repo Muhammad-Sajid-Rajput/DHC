@@ -1,0 +1,128 @@
+header { 
+  background-color: #fff;
+  border-bottom: 1px solid #b7b7b7;
+  padding: 10px 40px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  flex: 1;
+  margin: 0 40px;
+  max-width: 600px;
+}
+
+.search-bar select,
+.search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none;
+  outline: none;
+}
+
+.search-bar input {
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+}
+
+.search-bar select {
+  width: 30%;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #fe5300;
+  color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+/* Top Menu */
+.top-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.top-menu li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #444;
+  font-size: 14px;
+  transition: color 0.2s ease;
+  flex-direction: column;
+}
+
+.top-menu li:hover {
+  color: #fe5300;
+}
+
+/* Secondary Menu */
+.secondary-menu {
+  background-color: #fff;
+  border-bottom: 1px solid #b7b7b7;
+  width: 100%;
+  padding: 7px 40px;
+}
+
+.secondary-menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.secondary-menu-links {
+  display: flex;
+  gap: 20px;
+}
+
+.secondary-menu-links span {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.secondary-menu-links span:hover {
+  color: #fe5300;
+}
+
+.secondary-menu-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.secondary-menu-select select {
+  padding: 4px 12px;      
+  border: none;           
+  outline: none;          
+  background: transparent;  
+  font: inherit;
+  cursor: pointer;
+}

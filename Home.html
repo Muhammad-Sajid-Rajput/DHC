@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCommerce Header</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/trending-items.css" />
+  <link rel="stylesheet" href="styles/promo-and-deals.css" />
+  <link rel="stylesheet" href="styles/quote-recommended-services.css">
+  <link rel="stylesheet" href="styles/supplier-newsletter-footer.css" />
+  <link rel="stylesheet" href="styles/grid-list.css" />
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <iconify-icon icon="mdi:shopping-outline" width="40" height="40" style="color: #fe5300"></iconify-icon>
+        <span>Brand</span>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search..." />
+        <select id="categorySelect">
+          <option value="all">All Categories</option>
+          <option value="kitchenware">Kitchenware</option>
+          <option value="tableware">Tableware</option>
+          <option value="clothing">Clothing</option>
+          <option value="footwear">Footwear</option>
+          <option value="accessories">Accessories</option>
+          <option value="home-textiles">Home Textiles</option>
+          <option value="appliances">Home Appliances</option>
+          <option value="jewelry">Jewelry</option>
+          <option value="misc">Miscellaneous</option>
+        </select>
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <nav class="top-menu">
+        <ul>
+          <li><iconify-icon icon="mdi:account-circle" width="20"></iconify-icon> Profile</li>
+          <li><iconify-icon icon="mdi:message-text" width="20"></iconify-icon> Message</li>
+          <li><iconify-icon icon="mdi:clipboard-list" width="20"></iconify-icon> Orders</li>
+          <li><iconify-icon icon="mdi:cart" width="20"></iconify-icon> My Cart</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Secondary Menu -->
+  <div class="secondary-menu">
+    <div class="secondary-menu-container">
+      <div class="secondary-menu-links">
+        <span>Hot offers</span>
+        <span>Gift boxes</span>
+        <span>Menu items</span>
+      </div>
+      <div class="secondary-menu-select">
+        <span>Ship to</span>
+        <select id="countrySelect">
+          <option value="pk">Pakistan</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+          <option value="au">Australia</option>
+          <option value="ae">United Arab Emirates</option>
+          <option value="in">India</option>
+          <option value="de">Germany</option>
+          <option value="fr">France</option>
+          <option value="sa">Saudi Arabia</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <main class="container js-main-content">
+    <!-- Trending Items Section -->
+    <section class="trending-wrapper">
+      <!-- Left Column: Category Buttons -->
+      <div class="trending-categories">
+        <button class="category-btn active">Kitchenware</button>
+        <button class="category-btn">Tableware</button>
+        <button class="category-btn">Clothing</button>
+        <button class="category-btn">Footwear</button>
+        <button class="category-btn">Accessories</button>
+        <button class="category-btn">Home Textiles</button>
+        <button class="category-btn">Home Appliances</button>
+        <button class="category-btn">Jewelry</button>
+        <button class="category-btn">Miscellaneous</button>
+      </div>
+
+      <!-- Center Column: Banner -->
+      <div class="trending-banner">
+        <div class="banner-overlay">
+          <h2>Latest trending <br><strong>Electronic items</strong></h2>
+          <button>Learn more</button>
+        </div>
+      </div>
+
+      <!-- Right Column: User + Promotions -->
+      <div class="trending-user">
+        <div class="user-box">
+          <iconify-icon icon="ic:round-account-circle" width="40" height="40"></iconify-icon>
+          <p>Hi, user<br><span class="subtext">let’s get started</span></p>
+          <button class="btn-blue">Join now</button>
+          <button class="btn-white">Log in</button>
+        </div>
+
+        <div class="promo-box orange">
+          <p>Get US $10 off with a new supplier</p>
+        </div>
+        <div class="promo-box teal">
+          <p>Send quotes with supplier preferences</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Deals and Offers Section -->
+    <section class="deals-section">
+      <div class="deals-header">
+        <h2 class="deals-title">Deals and offers</h2>
+        <p class="deals-subtitle">Hygiene equipments</p>
+        <div class="timer">
+          <div class="time-box"><span>04</span><small>Days</small></div>
+          <div class="time-box"><span>13</span><small>Hour</small></div>
+          <div class="time-box"><span>34</span><small>Min</small></div>
+          <div class="time-box"><span>56</span><small>Sec</small></div>
+        </div>
+      </div>
+      <div class="offers-container js-offers-container"></div>
+    </section>
+
+
+    <!-- Category: Home Appliances -->
+    <section class="category-section">
+      <div class="category-box">
+        <div class="category-left home-appliances">
+          <h2>Home appliances</h2>
+          <button class="btn-source">Source now</button>
+        </div>
+        <div class="category-grid js-grid-home-appliances">
+          <!-- JS will inject items here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Category: Consumer Electronics -->
+    <section class="category-section">
+      <div class="category-box">
+        <div class="category-left consumer-electronics">
+          <h2>Consumer electronics and gadgets</h2>
+          <button class="btn-source">Source now</button>
+        </div>
+        <div class="category-grid js-grid-consumer-electronics">
+          <!-- JS will inject items here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="quote-text">
+        <h2>An easy way to send<br>requests to all suppliers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+
+      <div class="quote-form">
+        <h3>Send quote to suppliers</h3>
+        <input type="text" placeholder="What item you need?">
+        <textarea placeholder="Type more details" rows="3"></textarea>
+        <div class="form-row">
+          <input type="number" placeholder="Quantity">
+          <select>
+            <option>Pcs</option>
+            <option>Kgs</option>
+            <option>Boxes</option>
+          </select>
+        </div>
+        <button class="btn-blue">Send inquiry</button>
+      </div>
+    </section>
+
+
+    <!-- Recommended Items Section -->
+    <section class="recommended-section">
+      <h2 class="section-title">Recommended items</h2>
+      <div class="recommended-grid js-recommended-grid"></div>
+    </section>
+
+
+    <!-- Extra Services Section -->
+    <section class="services-section">
+      <h2 class="section-title">Our extra services</h2>
+      <div class="services-grid js-services-grid"></div>
+    </section>
+
+
+    <!-- Suppliers by Region -->
+    <section class="suppliers-section">
+      <h2 class="section-title">Suppliers by region</h2>
+      <div class="suppliers-grid js-suppliers-grid"></div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+  <!-- Full-width newsletter section -->
+  <div class="newsletter-section">
+    <h3>Subscribe on our newsletter</h3>
+    <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="Email">
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <!-- Max-width footer content -->
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h2>Brand</h2>
+        <p>Best information about the company goes here but now lorem ipsum is</p>
+        <div class="footer-socials">
+          <iconify-icon icon="logos:facebook" width="25" height="25"></iconify-icon>
+          <iconify-icon icon="skill-icons:twitter" width="25" height="25"></iconify-icon>
+          <iconify-icon icon="skill-icons:linkedin" width="25" height="25"></iconify-icon>
+          <iconify-icon icon="skill-icons:instagram" width="25" height="25"></iconify-icon>
+          <iconify-icon icon="logos:youtube-icon" width="25" height="25"></iconify-icon>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>About</h4>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div>
+          <h4>Partnership</h4>
+          <p>About Us</p>
+          <p>Find store</p>
+          <p>Categories</p>
+          <p>Blogs</p>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <p>Help Center</p>
+          <p>Money Refund</p>
+          <p>Shipping</p>
+          <p>Contact us</p>
+        </div>
+        <div>
+          <h4>For users</h4>
+          <p>Login</p>
+          <p>Register</p>
+          <p>Settings</p>
+          <p>My Orders</p>
+        </div>
+        <div class="app-download">
+          <h4>Get app</h4>
+          <div class="app-icons">
+            <iconify-icon icon="uiw:apple" width="24" height="24" style="color: #fff"></iconify-icon>
+            <div>
+              <p>Download on the</p>
+              <h2>App Store</h2>
+            </div>
+          </div>
+          <div class="app-icons">
+            <iconify-icon icon="simple-icons:googleplay" width="24" height="24" style="color: #ffffff"></iconify-icon>
+            <div>
+              <p>Get it on</p>
+              <h2>Google Play</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2023 Ecommerce.</p>
+      <p><img src="https://flagcdn.com/w20/us.png" alt=""> English</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+<script type="module" src="scripts/deals-promos.js"></script>
+<script type="module" src="scripts/recommended-services-suppliers.js"></script>
+<script src="scripts/grid-list.js"></script>
+
+</html>
