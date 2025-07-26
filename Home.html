@@ -6,78 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eCommerce Header</title>
   <link rel="stylesheet" href="styles/general.css" />
-  <link rel="stylesheet" href="styles/header.css" />
   <link rel="stylesheet" href="styles/trending-items.css" />
   <link rel="stylesheet" href="styles/promo-and-deals.css" />
   <link rel="stylesheet" href="styles/quote-recommended-services.css">
-  <link rel="stylesheet" href="styles/supplier-newsletter-footer.css" />
-  <link rel="stylesheet" href="styles/grid-list.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/supplier-newsletter.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-container">
-      <div class="logo">
-        <iconify-icon icon="mdi:shopping-outline" width="40" height="40" style="color: #fe5300"></iconify-icon>
-        <span>Brand</span>
-      </div>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
 
-      <div class="search-bar">
-        <input type="text" placeholder="Search..." />
-        <select id="categorySelect">
-          <option value="all">All Categories</option>
-          <option value="kitchenware">Kitchenware</option>
-          <option value="tableware">Tableware</option>
-          <option value="clothing">Clothing</option>
-          <option value="footwear">Footwear</option>
-          <option value="accessories">Accessories</option>
-          <option value="home-textiles">Home Textiles</option>
-          <option value="appliances">Home Appliances</option>
-          <option value="jewelry">Jewelry</option>
-          <option value="misc">Miscellaneous</option>
-        </select>
-        <button id="searchBtn">Search</button>
-      </div>
-
-      <nav class="top-menu">
-        <ul>
-          <li><iconify-icon icon="mdi:account-circle" width="20"></iconify-icon> Profile</li>
-          <li><iconify-icon icon="mdi:message-text" width="20"></iconify-icon> Message</li>
-          <li><iconify-icon icon="mdi:clipboard-list" width="20"></iconify-icon> Orders</li>
-          <li><iconify-icon icon="mdi:cart" width="20"></iconify-icon> My Cart</li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Secondary Menu -->
-  <div class="secondary-menu">
-    <div class="secondary-menu-container">
-      <div class="secondary-menu-links">
-        <span>Hot offers</span>
-        <span>Gift boxes</span>
-        <span>Menu items</span>
-      </div>
-      <div class="secondary-menu-select">
-        <span>Ship to</span>
-        <select id="countrySelect">
-          <option value="pk">Pakistan</option>
-          <option value="us">United States</option>
-          <option value="uk">United Kingdom</option>
-          <option value="ca">Canada</option>
-          <option value="au">Australia</option>
-          <option value="ae">United Arab Emirates</option>
-          <option value="in">India</option>
-          <option value="de">Germany</option>
-          <option value="fr">France</option>
-          <option value="sa">Saudi Arabia</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-  <main id="container">
+  <main class="container">
     <!-- Trending Items Section -->
     <section class="trending-wrapper">
       <!-- Left Column: Category Buttons -->
@@ -210,89 +151,8 @@
 
   </main>
 
-
-  <!-- Footer -->
-  <footer>
-    <!-- Full-width newsletter section -->
-    <div class="newsletter-section">
-      <h3>Subscribe on our newsletter</h3>
-      <p>Get daily news on upcoming offers from many suppliers all over the world</p>
-      <div class="newsletter-form">
-        <input type="email" placeholder="Email">
-        <button>Subscribe</button>
-      </div>
-    </div>
-
-    <!-- Max-width footer content -->
-    <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <h2>Brand</h2>
-          <p>Best information about the company goes here but now lorem ipsum is</p>
-          <div class="footer-socials">
-            <iconify-icon icon="logos:facebook" width="25" height="25"></iconify-icon>
-            <iconify-icon icon="skill-icons:twitter" width="25" height="25"></iconify-icon>
-            <iconify-icon icon="skill-icons:linkedin" width="25" height="25"></iconify-icon>
-            <iconify-icon icon="skill-icons:instagram" width="25" height="25"></iconify-icon>
-            <iconify-icon icon="logos:youtube-icon" width="25" height="25"></iconify-icon>
-          </div>
-        </div>
-
-        <div class="footer-links">
-          <div>
-            <h4>About</h4>
-            <p>About Us</p>
-            <p>Find store</p>
-            <p>Categories</p>
-            <p>Blogs</p>
-          </div>
-          <div>
-            <h4>Partnership</h4>
-            <p>About Us</p>
-            <p>Find store</p>
-            <p>Categories</p>
-            <p>Blogs</p>
-          </div>
-          <div>
-            <h4>Information</h4>
-            <p>Help Center</p>
-            <p>Money Refund</p>
-            <p>Shipping</p>
-            <p>Contact us</p>
-          </div>
-          <div>
-            <h4>For users</h4>
-            <p>Login</p>
-            <p>Register</p>
-            <p>Settings</p>
-            <p>My Orders</p>
-          </div>
-          <div class="app-download">
-            <h4>Get app</h4>
-            <div class="app-icons">
-              <iconify-icon icon="uiw:apple" width="24" height="24" style="color: #fff"></iconify-icon>
-              <div>
-                <p>Download on the</p>
-                <h2>App Store</h2>
-              </div>
-            </div>
-            <div class="app-icons">
-              <iconify-icon icon="simple-icons:googleplay" width="24" height="24" style="color: #ffffff"></iconify-icon>
-              <div>
-                <p>Get it on</p>
-                <h2>Google Play</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© 2023 Ecommerce.</p>
-        <p><img src="https://flagcdn.com/w20/us.png" alt=""> English</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
 
 </body>
 
@@ -300,6 +160,6 @@
 <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
 <script type="module" src="scripts/deals-promos.js"></script>
 <script type="module" src="scripts/recommended-services-suppliers.js"></script>
-<script type="module" src="scripts/grid-list.js"></script>
+<script src="scripts/utils/header-footer.js"></script>
 
 </html>
