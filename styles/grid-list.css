@@ -321,12 +321,15 @@
 
 .product-list.grid-view .products {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .product-list.grid-view .products img {
   height: 100px;
   object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Wishlist and Title Inline Row */

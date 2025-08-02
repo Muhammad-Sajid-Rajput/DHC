@@ -4,7 +4,7 @@ import { products } from './utils/products.js';
 
 const recommendedGrid = document.querySelector('.js-recommended-grid');
 
-products.forEach(product => {
+products.slice(0, 8).forEach(product => {
   const card = document.createElement('div');
   card.className = 'product-card';
   card.innerHTML = `

@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 // Get selected product ID from localStorage
 const id = localStorage.getItem('selectedProductId');
 const product = products.find(p => p.id === id);
@@ -129,10 +128,9 @@ products.slice(0, 5).forEach(product => {
 });
 
 
-
 const relatedContainer = document.querySelector('.js-related-list');
 
-products.forEach(product => {
+products.slice(-6).forEach(product => {
     const html = `
         <div class="related-item">
             <img src="${product.img}" alt="${product.img}" />
