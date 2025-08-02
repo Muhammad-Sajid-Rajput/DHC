@@ -1,70 +1,67 @@
+
 # DHC E-Commerce Cart Project
 
-This project is a simple e-commerce cart web application. It allows users to browse products, add them to a shopping cart, save items for later, and manage their cart before checkout. The project is built using HTML, CSS, and JavaScript, with a focus on client-side functionality and localStorage for persistence.
+This project is a modern e-commerce cart web application. Users can browse products, view detailed product information, add items to their cart, and save products for later. The application is built using HTML, CSS, and JavaScript, with all cart and wishlist data stored in the browser's localStorage for persistence.
 
 ## Features
-- Product listing and search
-- Add/remove products from cart
+- Product listing with grid and list views
+- Product detail page with dynamic info and price tiers
+- Add products to cart
+- Save products for later (wishlist) from both grid and details sidebar
+- Remove products from cart
 - Update product quantity in cart
-- Save products for later
-- Cart summary with subtotal, discount, tax, and total
-- Responsive UI with modern design
-- Persistent cart and saved items using localStorage
+- Cart summary: subtotal, discount, tax, total
+- Pagination for product grid
+- Responsive UI and modern design
+- Persistent cart and wishlist using localStorage
 
 ## Project Structure
 ```
-├── details.html
-├── footer.html
-├── header.html
-├── Home.html
-├── search.html
-├── web-cart.html
+├── details.html           # Product detail page
+├── footer.html            # Footer partial
+├── header.html            # Header partial
+├── Home.html              # Home page
+├── search.html            # Product search & grid page
+├── web-cart.html          # Cart page
 ├── Images/
-│   ├── clothing-size-chart.png
-│   ├── banner/
-│   ├── extra-services/
-│   ├── icons/
-│   ├── products/
-│   └── ratings/
+│   ├── banner/            # Banner images
+│   ├── extra-services/    # Service illustrations
+│   ├── icons/             # UI icons
+│   ├── products/          # Product images
+│   └── ratings/           # Ratings images
 ├── scripts/
-│   ├── cart.js
-│   ├── deals-promos.js
-│   ├── details.js
-│   ├── grid-list.js
+│   ├── cart.js            # Cart logic
+│   ├── deals-promos.js    # Deals and promotions
+│   ├── details.js         # Product detail logic (now supports save for later via sidebar)
+│   ├── grid-list.js       # Product grid, pagination, and wishlist logic
 │   ├── recommended-services-suppliers.js
 │   ├── trending-items.js
-│   ├── web-cart.js
+│   ├── web-cart.js        # Cart page logic
 │   └── utils/
 ├── styles/
 │   ├── cart.css
 │   ├── details.css
 │   ├── footer.css
 │   ├── general.css
-│   ├── grid-list.css
+│   ├── grid-list.css      # Supports pagination and grid/list views
 │   ├── header.css
 │   ├── promo-and-deals.css
 │   ├── quote-recommended-services.css
-│   └── supplier-newsletter.css
+│   ├── supplier-newsletter.css
 │   └── trending-items.css
 ```
 
 ## How It Works
-- **HTML files**: Define the structure of the main pages (home, cart, search, details, etc.).
-- **CSS files**: Provide styling for the cart, product grid, header, footer, and other UI components.
-- **JavaScript files**: Handle cart logic, product management, deals/promos, and UI interactions. The main cart logic is in `scripts/web-cart.js`.
-- **Images**: Product images, icons, banners, and service illustrations.
-
-## Getting Started
-1. Clone or download the repository.
-2. Open `Home.html` or `search.html` in your browser to start browsing products.
-3. Add products to your cart and manage them via `web-cart.html`.
+- **Product Grid**: Browse products with pagination and switch between grid/list views. Add products to wishlist directly from the grid.
+- **Product Details**: View detailed info, price tiers, and seller info. Add to cart or "Save for later" using the sidebar heart icon.
+- **Cart**: Manage cart items, update quantities, remove items, and see a summary with discounts and tax.
+- **Wishlist (Save for Later)**: Products can be saved for later from both the grid and details page. Saved items persist in localStorage.
 
 ## Usage
-- **Add to Cart**: Browse products and click 'Add to Cart'.
-- **Remove from Cart**: Click 'Remove' in the cart view.
-- **Update Quantity**: Use the quantity dropdown in the cart.
-- **Save for Later**: Click 'Save for later' to move items out of the cart.
-- **Move to Cart**: In the 'Saved for later' section, click 'Move to cart'.
+- **Add to Cart**: Click "Add to cart" on product details.
+- **Save for Later**: Click the heart icon or "Save for later" in the sidebar on details page, or wishlist button in the grid.
+- **Pagination**: Use the dropdown and page numbers to browse products.
+- **Remove/Update**: Manage cart and wishlist from the cart page.
 
 ## Technologies Used
 - HTML5
@@ -73,9 +70,9 @@ This project is a simple e-commerce cart web application. It allows users to bro
 - LocalStorage API
 
 ## Customization
-- Add new products by updating the product data in `cart.js` or related scripts.
-- Update styles in the `styles/` folder for a custom look.
-- Extend functionality by adding new scripts or modifying existing ones.
+- Add new products in `scripts/utils/products.js`.
+- Update styles in the `styles/` folder.
+- Extend features by editing scripts in the `scripts/` folder.
 
 ## License
 This project is for educational and demonstration purposes. You may modify and use it as needed.

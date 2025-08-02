@@ -110,17 +110,12 @@
         <!-- Pagination -->
         <div class="pagination">
             <label>Show
-                <select>
-                    <option>10</option>
-                    <option>20</option>
+                <select id="items-per-page">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
                 </select>
             </label>
-            <div class="pages">
-                <span class="active">1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>→</span>
-            </div>
+            <div class="pages" id="pagination-pages"></div>
         </div>
     </main>
 

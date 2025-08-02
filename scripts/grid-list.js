@@ -1,12 +1,54 @@
 import { products } from './utils/products.js';
 import { saveForLater } from './cart.js';
 
+let currentPage = 1;
+let itemsPerPage = 10;
+
 window.addEventListener('DOMContentLoaded', () => {
-  populateProducts();
+  setupPaginationControls();
+  renderPaginatedProducts();
   setupViewToggle();
 });
 
-function populateProducts() {
+function setupPaginationControls() {
+  const select = document.getElementById('items-per-page');
+  if (select) {
+    select.addEventListener('change', (e) => {
+      itemsPerPage = parseInt(e.target.value);
+      currentPage = 1;
+      renderPaginatedProducts();
+    });
+  }
+}
+
+function renderPaginatedProducts() {
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const paginated = products.slice(start, end);
+  populateProducts(paginated);
+  renderPageNumbers();
+}
+
+function renderPageNumbers() {
+  const pageContainer = document.getElementById('pagination-pages');
+  if (!pageContainer) return;
+  pageContainer.innerHTML = '';
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  for (let i = 1; i <= totalPages; i++) {
+    const span = document.createElement('span');
+    span.textContent = i;
+    if (i === currentPage) {
+      span.classList.add('active');
+    }
+    span.addEventListener('click', () => {
+      currentPage = i;
+      renderPaginatedProducts();
+    });
+    pageContainer.appendChild(span);
+  }
+}
+
+function populateProducts(paginatedProducts) {
   const productList = document.querySelector('.js-product-list');
   if (!productList) return;
   // Get latest saveForLater and cart from localStorage
@@ -22,9 +64,8 @@ function populateProducts() {
   } catch (e) {
     cartArr = [];
   }
-
-  products.forEach(product => {
-    // Don't show product as saved if it's already in cart
+  productList.innerHTML = '';
+  paginatedProducts.forEach(product => {
     const isInCart = cartArr.some(p => String(p.id) === String(product.id));
     const isSaved = saveForLaterArr.some(p => String(p.id) === String(product.id));
     const html = `
@@ -47,40 +88,31 @@ function populateProducts() {
       </div>`; 
     productList.insertAdjacentHTML('beforeend', html);
   });
-
   // Make the entire product card clickable for details
   productList.querySelectorAll('.products').forEach(card => {
     card.addEventListener('click', function(e) {
-      // Prevent wishlist button click from triggering navigation
       if (e.target.closest('.wishlist-btn')) return;
       const id = this.getAttribute('data-id');
       localStorage.setItem('selectedProductId', id);
       window.location.href = 'details.html';
     });
-
-    // Wishlist button functionality
     const wishlistBtn = card.querySelector('.wishlist-btn');
     if (wishlistBtn && !wishlistBtn.disabled) {
       wishlistBtn.addEventListener('click', function(e) {
         e.stopPropagation();
-        // Get product id
         const id = card.getAttribute('data-id');
-        // Find product from products array
         const product = products.find(p => String(p.id) === String(id));
         if (!product) return;
-        // Get latest saveForLater from localStorage
         let saveForLaterArr = [];
         try {
           saveForLaterArr = JSON.parse(localStorage.getItem('saveForLater')) || [];
         } catch (e) {
           saveForLaterArr = [];
         }
-        // Avoid duplicates
         if (!saveForLaterArr.some(p => String(p.id) === String(product.id))) {
           saveForLaterArr.push(product);
           localStorage.setItem('saveForLater', JSON.stringify(saveForLaterArr));
           alert(`${product.title} has been saved for later!`);
-          // Optionally, disable button after saving
           wishlistBtn.disabled = true;
         } else {
           alert(`${product.title} is already in your saved for later list.`);
