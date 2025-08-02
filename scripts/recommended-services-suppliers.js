@@ -1,6 +1,5 @@
-import { services } from './utils/services.js';
-import { products } from './utils/recommeded-items.js';
-import { suppliers } from './utils/suppliers.js';
+import { suppliers,services } from './utils/services-services.js';
+import { products } from './utils/products.js';
 // ----------------- Recommended Section -----------------
 
 const recommendedGrid = document.querySelector('.js-recommended-grid');
@@ -10,7 +9,7 @@ products.forEach(product => {
   card.className = 'product-card';
   card.innerHTML = `
     <img src="${product.img}" alt="${product.alt}">
-    <p class="price">${product.price}</p>
+    <p class="price">$${product.price}</p>
     <p class="desc">${product.desc}</p>
   `;
   recommendedGrid.appendChild(card);

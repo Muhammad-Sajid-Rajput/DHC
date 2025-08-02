@@ -1,9 +1,3 @@
-export const categories = [
-  "Kitchenware", "Tableware", "Clothing", "Footwear",
-  "Accessories", "Home Textiles", "Home Appliances",
-  "Jewelry", "Miscellaneous"
-];
-
 export const categorySections = [
   {
     class: 'home-appliances',

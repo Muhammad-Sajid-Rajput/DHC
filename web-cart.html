@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="styles/cart.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+     <!-- Header placeholder -->
+    <div id="header-placeholder"></div>
+    
+    <main id="container">
+        <div class="cart-container">
+            <!-- Cart Heading -->
+            <div class="cart-heading">
+                <h2>My cart (3)</h2>
+            </div>
+
+            <!-- Cart Content -->
+            <div class="cart-content">
+                <!-- Left Section -->
+                <div class="left-section">
+                    <!-- Cart Items Wrapper -->
+                    <div class="cart-items"></div>
+
+                    <!-- Cart Footer -->
+                    <div class="cart-footer">
+                        <button class="back-btn">&larr; Back to shop</button>
+                        <button class="remove-all">Remove all</button>
+                    </div>
+                </div>
+
+                <!-- Right Section -->
+                <div class="right-section">
+                    <div class="coupon">
+                        <h3>Have a coupon?</h3>
+                        <div class="coupon-box">
+                            <input type="text" placeholder="Add coupon">
+                            <button>Apply</button>
+                        </div>
+                    </div>
+
+                    <!-- Summary Section -->
+                    <div class="summary-section js-summary-section">
+                        <div class="summary-row">
+                            <span class="label">Subtotal</span>
+                            <span class="value subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">Discount</span>
+                            <span class="value discount">-$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span class="label">Tax</span>
+                            <span class="value tax">+$0.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span class="label">Total</span>
+                            <span class="value total">$0.00</span>
+                        </div>
+                        <button class="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Features Icons -->
+        <div class="icons">
+            <div class="icon-item">
+                <div class="icon-title">Secure payment</div>
+                <div class="icon-desc">Have you ever finally just</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-title">Customer support</div>
+                <div class="icon-desc">Have you ever finally just</div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-title">Free delivery</div>
+                <div class="icon-desc">Have you ever finally just</div>
+            </div>
+        </div>
+
+        <!-- Saved for Later Section -->
+        <div class="saved-section">
+            <h3>Saved for later</h3>
+            <div class="saved-grid js-saved-grid"></div>
+        </div>
+
+        <div class="discount-banner">
+            <div>
+                <strong>Super discount on more than 100 USD</strong><br />
+                Have you ever finally just write dummy info
+            </div>
+            <button>Shop now</button>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+
+</body>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script type="module" src="scripts/web-cart.js"></script>
+<script src="scripts/utils/header-footer.js"></script>
+
+</html>

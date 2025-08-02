@@ -6,24 +6,26 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f9fd;
+  background-color: #F8F9FA;
   padding-top: 65px;
 }
 
-.container {
+#container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 15px 15px;
 }
 
 .btn-blue {
   background-color: #4193ff;
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 10px ;
   border-radius: 6px;
   margin-top: 10px;
   width: 100%;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
 }
 

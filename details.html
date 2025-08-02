@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="styles/details.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+
+</head>
+
+<body>
+    <!-- Header placeholder -->
+
+    <div id="header-placeholder"></div>
+
+    <main id="container">
+        <!-- Product Section -->
+        <div class="top-section">
+            <!-- Left: Product Image -->
+            <div class="image-preview">
+                <img class="main-img" src="" alt="Product Image" />
+                <div class="thumbnails">
+                    <img src="" />
+                    <img src="" />
+                    <img src="" />
+                    <img src="" />
+                    <img src="" />
+                </div>
+            </div>
+
+            <!-- Right: Product Info -->
+            <div class="product-info">
+                <!-- Stock -->
+                <p class="stock">✔ In stock</p>
+
+                <!-- Title -->
+                <h1 class="title"></h1>
+
+                <!-- Rating, Reviews, Sold -->
+                <div class="rating"></div>
+
+                <!-- Price Tiers -->
+                <div class="price-box"></div>
+
+                <!-- Details -->
+                <div class="meta-info"></div>
+            </div>
+
+            <!-- Seller Card -->
+            <div class="side-column">
+                <div class="seller-box">
+                    <div class="seller-header">
+                        <div class="seller-icon">R</div>
+                        <div>
+                            <div class="seller-title">Supplier</div>
+                            <div class="seller-name">Guanoji Trading LLC</div>
+                        </div>
+                    </div>
+
+                    <div class="seller-details">
+                        <div class="detail-item">
+                            <span class="iconify" data-icon="twemoji:flag-germany" style="font-size: 18px;"></span>
+                            <span>Germany, Berlin</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="iconify" data-icon="ic:round-verified-user"
+                                style="font-size: 18px; color: #5f6368;"></span>
+                            <span>Verified Seller</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="iconify" data-icon="mdi:earth" style="font-size: 18px; color: #5f6368;"></span>
+                            <span>Worldwide shipping</span>
+                        </div>
+                    </div>
+                    <button class="btn-blue">Send inquiry</button>
+                    <button class="btn-secondary">Seller’s profile</button>
+                </div>
+                <div class="save-for-later">
+                    <span class="iconify" data-icon="mdi:heart-outline"></span>
+                    <span>Save for later</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="product-page">
+            <!-- Left Content -->
+            <div class="products-details">
+                <!-- Tabs -->
+                <div class="tabs">
+                    <div class="tab active">Description</div>
+                    <div class="tab">Reviews</div>
+                    <div class="tab">Shipping</div>
+                    <div class="tab">About seller</div>
+                </div>
+
+                <!-- Description Content -->
+                <div class="tab-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat pariatur.</p>
+
+                    <table class="specs-table">
+                        <tr>
+                            <td>Model</td>
+                            <td>#8786867</td>
+                        </tr>
+                        <tr>
+                            <td>Style</td>
+                            <td>Classic style</td>
+                        </tr>
+                        <tr>
+                            <td>Certificate</td>
+                            <td>ISO-898921212</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>34mm x 450mm x 19mm</td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td>36GB RAM</td>
+                        </tr>
+                    </table>
+
+                    <ul class="feature-list">
+                        <li>✔ Some great feature name here</li>
+                        <li>✔ Lorem ipsum dolor sit amet, consectetur</li>
+                        <li>✔ Duis aute irure dolor in reprehenderit</li>
+                        <li>✔ Some great feature name here</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Suggestions -->
+            <div class="you-may-like js-suggestions">
+                <p class="title">You may like</p>
+            </div>
+        </div>
+
+
+        <!-- Related Products -->
+        <section class="related-products">
+            <h3>Related products</h3>
+            <div class="related-list js-related-list"></div>
+        </section>
+
+
+        <!-- Banner -->
+        <div class="discount-banner">
+            <div>
+                <strong>Super discount on more than 100 USD</strong><br />
+                Have you ever finally just write dummy info
+            </div>
+            <button>Shop now</button>
+        </div>
+
+    </main>
+
+    <!-- Footer placeholder -->
+    <div id="footer-placeholder"></div>
+</body>
+<script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+<script src="scripts/utils/header-footer.js"></script>
+<script type="module" src="scripts/details.js"></script>
+
+</html>

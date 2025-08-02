@@ -1,18 +1,36 @@
-import { offers } from './utils/offers.js';
 import { categorySections } from './utils/categories.js';
-// Populate Offers
+import { products } from './utils/products.js';
+
+// Populate Offers (Only products with a discount)
 const offerContainer = document.querySelector('.js-offers-container');
-offers.forEach(({ img, alt, name, discount, price }) => {
-  const html = `
-    <div class="offer-item">
-      <img src="${img}" alt="${alt}" />
-      <h3>${name}</h3>
-      <span class="discount">${discount}</span>
-      <p class="price">Price: ${price}</p>
-      <button class="btn-blue">Buy Now</button>
-    </div>
-  `;
-  offerContainer.insertAdjacentHTML('beforeend', html);
+
+products
+  .filter(product => product.discount) // Only include products with discount
+  .forEach(({ img, alt, title, discount, price }) => {
+    const html = `
+      <div class="offer-item" data-name="${title}">
+        <img src="${img}" alt="${alt}" />
+        <h3>${title}</h3>
+        <span class="discount">-${discount}%</span>
+        <p class="price">Price: $${price}</p>
+        <button class="btn-blue">Buy Now</button>
+      </div>
+    `;
+    offerContainer.insertAdjacentHTML('beforeend', html);
+  });
+
+// Add Buy Now button functionality
+offerContainer.querySelectorAll('.offer-item .btn-blue').forEach(btn => {
+  btn.addEventListener('click', function () {
+    const offerItem = this.closest('.offer-item');
+    const name = offerItem.getAttribute('data-name');
+
+    const product = products.find(p => p.title === name);
+    if (product) {
+      localStorage.setItem('selectedProductId', product.id);
+      window.location.href = 'details.html';
+    }
+  });
 });
 
 // Populate Only Category Grids
