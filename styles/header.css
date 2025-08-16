@@ -16,6 +16,11 @@ header {
   margin: 0 auto;
 }
 
+.hambuger {
+  display: none;
+  cursor: pointer;
+}
+
 /* Logo */
 .logo {
   display: flex;
@@ -126,4 +131,115 @@ header {
   background: transparent;  
   font: inherit;
   cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+ 
+  .header-container {
+    max-width: 100%;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Show hamburger in mobile */
+  .hambuger {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* Reorder: top row = hamburger + logo + cart/profile */
+  .hambuger {
+    order: 0;
+  }
+  .logo {
+    order: 1;
+    font-size: 18px;
+    gap: 5px;
+  }
+  .top-menu {
+    order: 2;
+  }
+  .top-menu ul {
+    flex-direction: row;
+    gap: 15px;
+  }
+  /* Hide Message & Orders in mobile */
+  .top-menu ul li:nth-child(2),
+  .top-menu ul li:nth-child(3) {
+    display: none;
+  }
+
+  /* Search bar below top row */
+  .search-bar {
+    order: 3;
+    flex: 1 0 70%;
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-bar select {
+    display: none;
+  }
+  .search-bar input {
+    flex: 1;
+    border-radius: 5px;
+    max-width: 500px;
+  }
+  .search-bar button {
+    border-radius: 5px;
+  }
+
+  /* Secondary menu full width below */
+  .secondary-menu {
+    padding: 10px 15px;
+    width: 100%;
+    position: fixed;
+    top: 110px;
+    left: 0;
+    background-color: #fff;
+    z-index: 999;
+  }
+
+  .secondary-menu-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Fix for missing spans */
+  .secondary-menu-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    overflow: visible; 
+  }
+
+  .secondary-menu-select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  .secondary-menu-select span, 
+  .secondary-menu-select label, 
+  .secondary-menu-select div {
+    white-space: nowrap;
+  }
+
+  .secondary-menu-links span {
+    display: inline-block !important;
+    white-space: nowrap;
+    font-size: 14px; 
+  }
 }

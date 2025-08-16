@@ -40,3 +40,35 @@
 .suppliers-grid img {
   width: 20px;
 }
+
+@media (max-width: 768px) {
+  .suppliers-section {
+    width: 715px;
+    margin: 12px auto;
+    align-items: center;
+    padding-left: 50px;
+  }
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+  .suppliers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    justify-content: space-evenly;
+  }
+  .suppliers-grid div {
+    width: calc(25% - 20px);
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .suppliers-grid img {
+    width: 16px;
+  }
+  .suppliers-grid span {
+    font-size: 11px;
+    margin-left: 18px;
+  }
+}

@@ -127,7 +127,7 @@
 
 .category-left.home-appliances {
   background: url(../Images/banner/banner3.jpg) no-repeat top left;
-  background-size:cover;
+  background-size: cover;
 }
 
 .category-left.consumer-electronics {
@@ -135,7 +135,7 @@
 }
 
 .category-left {
-  width: 200px; 
+  width: 200px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -177,7 +177,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 149px; 
+  min-height: 149px;
 }
 
 
@@ -199,4 +199,70 @@
   height: 70px;
   object-fit: contain;
   margin: 0 auto;
+}
+
+/* Mobile view: deals-title-box, timer, and responsive adjustments */
+@media (max-width: 768px) {
+  .deals-section {
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;
+    width: 725px;
+  }
+
+  .deals-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .deals-title-box,
+  .timer {
+    margin-bottom: 0;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .deals-title {
+    font-size: 24px;
+  }
+
+  .deals-subtitle {
+    font-size: 18px;
+  }
+
+  .timer {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .category-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #c0c0c0;
+    border-radius: 4px;
+    height: 300px;
+    width: 725px;
+  }
+
+  .category-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .category-item {
+    min-width: 110px;
+  }
+
+  .category-item img {
+    max-width: 50px;
+    height: 50px;
+  }
 }

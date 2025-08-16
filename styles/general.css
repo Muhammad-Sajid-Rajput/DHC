@@ -32,3 +32,17 @@ body {
 .btn-blue:hover {
   background-color: #1877f2;
 }
+
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 55px;
+  }
+
+  #container {
+    max-width: 100%;
+    padding: 10px 5px;
+  }
+
+
+}

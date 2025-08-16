@@ -1,116 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eCommerce Header</title>
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/trending-items.css" />
-    <link rel="stylesheet" href="styles/promo-and-deals.css" />
-    <link rel="stylesheet" href="styles/quote-recommended-services.css">
-    <link rel="stylesheet" href="styles/header.css" />
-    <link rel="stylesheet" href="styles/supplier-newsletter.css" />
-    <link rel="stylesheet" href="styles/footer.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCommerce Header</title>
+  <link rel="stylesheet" href="styles/general.css" />
+  <link rel="stylesheet" href="styles/trending-items.css" />
+  <link rel="stylesheet" href="styles/promo-and-deals.css" />
+  <link rel="stylesheet" href="styles/quote-recommended-services.css">
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/supplier.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+</head>
 
-  <body>
-    <!-- Header placeholder -->
-    <div id="header-placeholder"></div>
+<body>
+  <!-- Header placeholder -->
+  <div id="header-placeholder"></div>
 
-    <main id="container">
-      <!-- Trending Items Section -->
-      <section class="trending-wrapper">
-        <!-- Left Column: Category Buttons -->
-        <div class="trending-categories">
-          <button class="category-btn active">Kitchenware</button>
-          <button class="category-btn">Tableware</button>
-          <button class="category-btn">Clothing</button>
-          <button class="category-btn">Footwear</button>
-          <button class="category-btn">Accessories</button>
-          <button class="category-btn">Home Textiles</button>
-          <button class="category-btn">Home Appliances</button>
-          <button class="category-btn">Jewelry</button>
-          <button class="category-btn">Miscellaneous</button>
+  <main id="container">
+    <!-- Trending Items Section -->
+    <section class="trending-wrapper">
+      <!-- Left Column: Category Buttons -->
+      <div class="trending-categories">
+        <button class="category-btn active">Kitchenware</button>
+        <button class="category-btn">Tableware</button>
+        <button class="category-btn">Clothing</button>
+        <button class="category-btn">Footwear</button>
+        <button class="category-btn">Accessories</button>
+        <button class="category-btn">Home Textiles</button>
+        <button class="category-btn">Home Appliances</button>
+        <button class="category-btn">Jewelry</button>
+        <button class="category-btn">Miscellaneous</button>
+      </div>
+
+      <!-- Center Column: Banner -->
+      <div class="trending-banner">
+        <img class="trending-banner-img" src="images/banner/banner1.jpg" alt="Trending Banner">
+        <div class="banner-overlay">
+          <h2>Latest trending <br><strong>Electronic items</strong></h2>
+          <button>Learn more</button>
+        </div>
+      </div>
+
+      <!-- Right Column: User + Promotions -->
+      <div class="trending-user">
+        <div class="user-box">
+          <iconify-icon icon="ic:round-account-circle" width="40" height="40"></iconify-icon>
+          <p>Hi, user<br><span class="subtext">let’s get started</span></p>
+          <button class="btn-blue">Join now</button>
+          <button class="btn-white">Log in</button>
         </div>
 
-        <!-- Center Column: Banner -->
-        <div class="trending-banner">
-          <div class="banner-overlay">
-            <h2>Latest trending <br><strong>Electronic items</strong></h2>
-            <button>Learn more</button>
-          </div>
+        <div class="promo-box orange">
+          <p>Get US $10 off with a new supplier</p>
         </div>
-
-        <!-- Right Column: User + Promotions -->
-        <div class="trending-user">
-          <div class="user-box">
-            <iconify-icon icon="ic:round-account-circle" width="40" height="40"></iconify-icon>
-            <p>Hi, user<br><span class="subtext">let’s get started</span></p>
-            <button class="btn-blue">Join now</button>
-            <button class="btn-white">Log in</button>
-          </div>
-
-          <div class="promo-box orange">
-            <p>Get US $10 off with a new supplier</p>
-          </div>
-          <div class="promo-box teal">
-            <p>Send quotes with supplier preferences</p>
-          </div>
+        <div class="promo-box teal">
+          <p>Send quotes with supplier preferences</p>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- Deals and Offers Section -->
-      <section class="deals-section">
-        <div class="deals-header">
+    <!-- Deals and Offers Section -->
+    <section class="deals-section">
+      <div class="deals-header">
+        <div class="deals-title-box">
           <h2 class="deals-title">Deals and offers</h2>
           <p class="deals-subtitle">Hygiene equipments</p>
-          <div class="timer">
-            <div class="time-box"><span>04</span><small>Days</small></div>
-            <div class="time-box"><span>13</span><small>Hour</small></div>
-            <div class="time-box"><span>34</span><small>Min</small></div>
-            <div class="time-box"><span>56</span><small>Sec</small></div>
-          </div>
         </div>
-        <div class="offers-container js-offers-container"></div>
-      </section>
-
-
-      <!-- Category: Home Appliances -->
-      <section class="category-section">
-        <div class="category-box">
-          <div class="category-left home-appliances">
-            <h2>Home appliances</h2>
-            <button class="btn-source">Source now</button>
-          </div>
-          <div class="category-grid js-grid-home-appliances">
-            <!-- JS will inject items here -->
-          </div>
+        <div class="timer">
+          <div class="time-box"><span>04</span><small>Days</small></div>
+          <div class="time-box"><span>13</span><small>Hour</small></div>
+          <div class="time-box"><span>34</span><small>Min</small></div>
+          <div class="time-box"><span>56</span><small>Sec</small></div>
         </div>
-      </section>
+      </div>
+      <div class="offers-container js-offers-container"></div>
+    </section>
 
 
-      <!-- Category: Consumer Electronics -->
-      <section class="category-section">
-        <div class="category-box">
-          <div class="category-left consumer-electronics">
-            <h2>Consumer electronics and gadgets</h2>
-            <button class="btn-source">Source now</button>
-          </div>
-          <div class="category-grid js-grid-consumer-electronics">
-            <!-- JS will inject items here -->
-          </div>
+    <!-- Category: Home Appliances -->
+    <section class="category-section">
+      <div class="category-box">
+        <div class="category-left home-appliances">
+          <h2>Home appliances</h2>
+          <button class="btn-source">Source now</button>
         </div>
-      </section>
-
-
-      <!-- Quote Section -->
-      <section class="quote-section">
-        <div class="quote-text">
-          <h2>An easy way to send<br>requests to all suppliers</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+        <div class="category-grid js-grid-home-appliances">
+          <!-- JS will inject items here -->
         </div>
+      </div>
+    </section>
+
+
+    <!-- Category: Consumer Electronics -->
+    <section class="category-section">
+      <div class="category-box">
+        <div class="category-left consumer-electronics">
+          <h2>Consumer electronics and gadgets</h2>
+          <button class="btn-source">Source now</button>
+        </div>
+        <div class="category-grid js-grid-consumer-electronics">
+          <!-- JS will inject items here -->
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="quote-text">
+        <h2>An easy way to send<br>requests to all suppliers</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+
+      <div>
+
 
         <div class="quote-form">
           <h3>Send quote to suppliers</h3>
@@ -124,44 +130,45 @@
               <option>Boxes</option>
             </select>
           </div>
-          <button class="btn-blue">Send inquiry</button>
         </div>
-      </section>
+        <button class="btn-blue">Send inquiry</button>
+      </div>
+    </section>
 
 
-      <!-- Recommended Items Section -->
-      <section class="recommended-section">
-        <h2 class="section-title">Recommended items</h2>
-        <div class="recommended-grid js-recommended-grid"></div>
-      </section>
+    <!-- Recommended Items Section -->
+    <section class="recommended-section">
+      <h2 class="section-title">Recommended items</h2>
+      <div class="recommended-grid js-recommended-grid"></div>
+    </section>
 
 
-      <!-- Extra Services Section -->
-      <section class="services-section">
-        <h2 class="section-title">Our extra services</h2>
-        <div class="services-grid js-services-grid"></div>
-      </section>
+    <!-- Extra Services Section -->
+    <section class="services-section">
+      <h2 class="section-title">Our extra services</h2>
+      <div class="services-grid js-services-grid"></div>
+    </section>
 
 
-      <!-- Suppliers by Region -->
-      <section class="suppliers-section">
-        <h2 class="section-title">Suppliers by region</h2>
-        <div class="suppliers-grid js-suppliers-grid"></div>
-      </section>
+    <!-- Suppliers by Region -->
+    <section class="suppliers-section">
+      <h2 class="section-title">Suppliers by region</h2>
+      <div class="suppliers-grid js-suppliers-grid"></div>
+    </section>
 
-    </main>
+  </main>
 
-    <!-- Footer placeholder -->
-    <div id="footer-placeholder"></div>
+  <!-- Footer placeholder -->
+  <div id="footer-placeholder"></div>
 
-  </body>
+</body>
 
 
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
-  <script type="module" src="scripts/deals-promos.js"></script>
-  <script type="module" src="scripts/recommended-services-suppliers.js"></script>
-  <script src="scripts/trending-items.js"></script>
-  <script src="scripts/utils/header-footer.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+<script type="module" src="scripts/deals-promos.js"></script>
+<script type="module" src="scripts/recommended-services-suppliers.js"></script>
+<script src="scripts/trending-items.js"></script>
+<script src="scripts/utils/header-footer.js"></script>
 
 </html>
