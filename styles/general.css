@@ -36,7 +36,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 55px;
+    padding: 25px;
   }
 
   #container {
@@ -46,7 +46,7 @@ body {
   }
 
   footer{
-    width: 868px;
+    width: 715px;
   }
 
 }

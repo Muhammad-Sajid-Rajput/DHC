@@ -85,3 +85,54 @@ if (product) {
     });
   }
 }
+
+// Helper function to shuffle array
+function shuffleArray(arr) {
+  return arr
+    .map(a => ({ sort: Math.random(), value: a }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(a => a.value);
+}
+
+// ========= You May Like Section =========
+const youMayLikeContainer = document.querySelector(".you-may-like");
+if (youMayLikeContainer) {
+  const title = document.createElement("div");
+  title.className = "title";
+  title.textContent = "You may like";
+  youMayLikeContainer.appendChild(title);
+
+  // Pick 4 random different products
+  shuffleArray(products.filter(p => p.id !== product.id))
+    .slice(0, 4).forEach(item => {
+      const suggestion = document.createElement("div");
+      suggestion.className = "suggestion";
+      suggestion.innerHTML = `
+          <img src="${item.img}" alt="${item.title}">
+          <div>
+            <p>${item.title}</p>
+            <span>$${item.price}</span>
+          </div>
+        `;
+      youMayLikeContainer.appendChild(suggestion);
+    });
+}
+
+// ========= Related Products Section =========
+const relatedList = document.querySelector(".js-related-list");
+if (relatedList) {
+  // Pick 6 random different products
+  shuffleArray(products.filter(p => p.id !== product.id))
+    .slice(0, 6).forEach(item => {
+      const card = document.createElement("div");
+      card.className = "related-item";
+      card.innerHTML = `
+          <img src="${item.img}" alt="${item.title}">
+          <div class="desc">
+            <p>${item.title}</p>
+            <span>$${item.price}</span>
+          </div>
+        `;
+      relatedList.appendChild(card);
+    });
+}

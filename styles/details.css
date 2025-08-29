@@ -373,7 +373,7 @@
 /* Scrollable horizontal product list */
 .related-list {
   display: flex;
-  gap: 16px;
+  gap: 13px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding-bottom: 10px;
@@ -386,7 +386,7 @@
   border-radius: 6px;
   width: 160px;
   flex: 0 0 auto;
-  padding: 12px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -471,4 +471,80 @@
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Stack the main product section vertically */
+  .top-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .image-preview {
+    text-align: center;
+  }
+
+  .image-preview img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .thumbnails {
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .thumbnails img {
+    width: 58px;
+    height: 58px;
+  }
+
+  /* Product info full width */
+  .product-info {
+    max-width: 100%;
+    margin-top: 12px;
+  }
+
+  .price-box {
+    display: none;
+  }
+
+  /* Move seller box below product info */
+  .seller-box {
+    width: 100%;
+  }
+
+  .seller-details {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 16px 0;
+    border-top: 1px solid #ccc;
+    padding-top: 16px;
+    align-items: center;
+    justify-content: space-between;
+} 
+
+  .you-may-like {
+    display: none;
+
+  } 
+
+  /* Related products scroll horizontally */
+  .related-list {
+    gap: 10px;
+  }
+
+  .related-item {
+    width: 140px;
+  }
+
+  /* Banner stack */
+  .discount-banner {
+    display: none;
+  }
 }
