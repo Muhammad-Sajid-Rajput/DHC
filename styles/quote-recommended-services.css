@@ -190,7 +190,6 @@
     flex-direction: column;
     padding: 12px 5px;
     height: auto;
-    width: 715px;
   }
 
   .quote-text {
@@ -207,7 +206,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    width: 715px;
   }
 
   .product-card {
@@ -222,7 +220,6 @@
     gap: 20px;
     justify-content: center;
     align-items: stretch;
-    width: 715px;
     height: auto;
   }
 

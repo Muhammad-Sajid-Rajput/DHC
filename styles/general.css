@@ -40,9 +40,13 @@ body {
   }
 
   #container {
-    max-width: 100%;
+    width: 715px;
     padding: 10px 5px;
+    margin-top: 110px;
   }
 
+  footer{
+    width: 868px;
+  }
 
 }

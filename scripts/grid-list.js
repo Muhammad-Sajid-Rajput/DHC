@@ -8,6 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
   setupPaginationControls();
   renderPaginatedProducts();
   setupViewToggle();
+  setupFilterToggle();
 });
 
 function setupPaginationControls() {
@@ -122,7 +123,6 @@ function populateProducts(paginatedProducts) {
   });
 }
 
-
 function setupViewToggle() {
   const viewIcons = document.querySelectorAll('.view-icons');
   const productList = document.querySelector('.js-product-list');
@@ -139,5 +139,22 @@ function setupViewToggle() {
         productList.classList.remove('grid-view');
       }
     });
+  });
+}
+
+// New function: Toggle sidebar
+function setupFilterToggle() {
+  const filterBtn = document.querySelector('.filter-btn');
+  const closeBtn = document.querySelector('.close-filter');
+  const sidebar = document.querySelector('.sidebar');
+
+  if (!filterBtn || !sidebar) return;
+
+  filterBtn.addEventListener('click', () => {
+    sidebar.classList.add('open');
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    sidebar.classList.remove('open');
   });
 }

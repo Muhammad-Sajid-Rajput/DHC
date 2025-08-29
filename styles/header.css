@@ -137,7 +137,6 @@ header {
 @media (max-width: 768px) {
  
   .header-container {
-    max-width: 100%;
     padding: 0;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -179,7 +178,6 @@ header {
     margin-top: 10px;
     display: flex;
     gap: 8px;
-    width: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -198,7 +196,6 @@ header {
   /* Secondary menu full width below */
   .secondary-menu {
     padding: 10px 15px;
-    width: 100%;
     position: fixed;
     top: 110px;
     left: 0;
@@ -221,7 +218,6 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    width: 100%;
     overflow: visible; 
   }
 
