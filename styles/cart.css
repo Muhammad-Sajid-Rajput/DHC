@@ -134,7 +134,7 @@
 .cart-footer {
   display: flex;
   justify-content: space-between;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .cart-footer button {
@@ -347,7 +347,21 @@
   color: #333;
 }
 
-.move-to-cart {
+/* Actions container for saved items */
+.actions-for-saved-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Make both buttons equal width */
+.actions-for-saved-items button {
+  flex: 1;
+}
+
+/* Move to cart button style */
+.actions-for-saved-items .move-to-cart {
   background: #0055ff;
   color: white;
   border: none;
@@ -355,7 +369,17 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 14px;
-  width: 100%;
+}
+
+/* Remove button style */
+.actions-for-saved-items .remove {
+  background: #ffe1e1;
+  color: #ff0000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 
@@ -403,4 +427,74 @@
   padding: 10px 20px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Mobile Responsive Layout */
+@media (max-width: 768px) {
+
+  /* Cart content: stack left + right sections */
+  .cart-content {
+    flex-direction: column;
+  }
+
+  .cart-heading h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+
+  /* Saved for later grid -> two columns on mobile */
+  .saved-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .saved-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .saved-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 6px;
+    flex-shrink: 0;
+  }
+
+  .saved-title,
+  .saved-price {
+    margin: 2px 0;
+    font-size: 14px;
+  }
+
+  .actions-for-saved-items {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+    width: 80%;
+  }
+
+  .actions-for-saved-items button {
+    flex: 1;
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  /* Checkout button full width */
+  .checkout-btn {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .discount-banner {
+    display: none;
+  }
 }

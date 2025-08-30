@@ -7,7 +7,8 @@ import {
   updateCartQty, 
   moveToSaveForLater, 
   moveToCartFromSaved, 
-  clearCart 
+  clearCart,
+  removeFromSaved
 } from './cart.js';
 
 // Handle Back to shop and Remove all buttons
@@ -45,13 +46,24 @@ function renderSavedForLater() {
       <img src="${product.img}" alt="${product.alt}">
       <p class="saved-price">$${product.price}</p>
       <p class="saved-title">${product.title}</p>
+      <div class="actions-for-saved-items">
       <button class="move-to-cart">Move to cart</button>
+      <button class="remove">Remove</button>
+      </div>
     `;
+
     item.querySelector('.move-to-cart').addEventListener('click', () => {
       moveToCartFromSaved(product);
       renderCart();
       renderSavedForLater();
     });
+
+    // remove button event
+    item.querySelector('.remove').addEventListener('click', () => {
+      removeFromSaved(product.id);
+      renderSavedForLater();
+    });
+
     savedGrid.appendChild(item);
   });
 }

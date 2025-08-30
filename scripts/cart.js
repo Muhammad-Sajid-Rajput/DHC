@@ -80,6 +80,15 @@ export function moveToCartFromSaved(product) {
   }
 }
 
+// Remove directly from Saved for Later
+export function removeFromSaved(id) {
+  const idx = saveForLater.findIndex(p => p.id === id);
+  if (idx !== -1) {
+    saveForLater.splice(idx, 1);
+    updateSavedStorage();
+  }
+}
+
 // Clear cart
 export function clearCart() {
   cart.length = 0;
