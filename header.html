@@ -13,7 +13,6 @@
       <input type="text" placeholder="Search..." />
       <select id="categorySelect">
         <option value="all">All Categories</option>
-        <!-- other categories -->
       </select>
       <button id="searchBtn">Search</button>
     </div>
@@ -40,8 +39,44 @@
       <span>Ship to</span>
       <select id="countrySelect">
         <option value="pk">Pakistan</option>
-        <!-- other countries -->
       </select>
     </div>
   </div>
 </div>
+
+<!-- Sidebar -->
+<div class="overlay"></div>
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="user-icon">
+      <iconify-icon icon="mdi:account"></iconify-icon>
+    </div>
+    <div class="auth-links">
+      <a href="#">Sign in</a> | <a href="#">Register</a>
+    </div>
+    <button class="close-btn">&times;</button>
+  </div>
+
+  <ul class="menu">
+    <li><iconify-icon icon="mdi:home-outline"></iconify-icon> Home</li>
+    <li><iconify-icon icon="mdi:view-list-outline"></iconify-icon> Categories</li>
+    <li><iconify-icon icon="mdi:heart-outline"></iconify-icon> Favorites</li>
+    <li><iconify-icon icon="mdi:clipboard-text-outline"></iconify-icon> My orders</li>
+  </ul>
+
+  <hr>
+
+  <ul class="menu">
+    <li><iconify-icon icon="mdi:web"></iconify-icon> English | USD</li>
+    <li><iconify-icon icon="mdi:headset"></iconify-icon> Contact us</li>
+    <li><iconify-icon icon="mdi:office-building-outline"></iconify-icon> About</li>
+  </ul>
+
+  <hr>
+
+  <ul class="menu last">
+    <li>User agreement</li>
+    <li>Partnership</li>
+    <li>Privacy policy</li>
+  </ul>
+</aside>
